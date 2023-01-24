@@ -1,0 +1,133 @@
+:root {
+  --border-color: #144fc6;
+  --fill-color: #6ab3f8;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.containerFlex {
+  width: 100%;
+  padding: 2rem;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  color: #fff;
+  background-color: #21d4fd;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  background-attachment: fixed;
+}
+
+h1 {
+  font-size: 4rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  margin-bottom: 2rem;
+}
+p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cup {
+  width: 15rem;
+  height: 33rem;
+  margin: 3rem 0;
+  border-radius: 0 0 4rem 4rem;
+  border: 0.4rem solid var(--border-color);
+  color: var(--border-color);
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+.remained {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  transition: all 0.3s ease-in;
+}
+.remained span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.remained small {
+  font-size: 1.6rem;
+}
+
+.percentage {
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: var(--fill-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.3s ease-in;
+  height: 0;
+}
+
+.cups {
+  width: 35%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  align-items: center;
+  justify-items: center;
+}
+
+.cup-small {
+  width: 5rem;
+  height: 9.5rem;
+  font-size: 1.4rem;
+
+  margin: 0 1rem 1rem 0;
+
+  border-radius: 0 0 1.5rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: all 0.3s ease-in;
+}
+
+.full {
+  background-color: var(--fill-color);
+  color: #fff;
+}

@@ -1,0 +1,133 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 20, 145, 0.7);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* ----------------------------------- */
+
+.container {
+  width: 80rem;
+  height: 50rem;
+  border-radius: 1rem;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  width: 500%; /* 500% */
+  height: 50rem;
+  display: flex;
+}
+
+/* ----------------------------------- */
+.slides__radio-btn {
+  display: none;
+}
+
+/* ----------------------------------- */
+
+.slides__card {
+  width: 20%;
+
+  transition: 2s;
+}
+
+.slides__img {
+  width: 80rem;
+  height: 50rem;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: brightness(0.8);
+}
+
+/* ----------------------------------- */
+/* nav manual */
+.slides__nav-manual {
+  width: 80rem;
+  position: absolute;
+  bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.slides__manual-btn {
+  border: 0.2rem solid deeppink;
+  padding: 0.7rem; /* .5rem */
+  border-radius: 50%; /* 1rem*/
+  cursor: pointer;
+
+  transition: 1s;
+}
+
+.slides__manual-btn:hover {
+  background-color: deeppink;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+#radio5:checked ~ .first {
+  margin-left: -80%;
+}
+
+/* ----------------------------------- */
+/* Automatic  Navigation */
+
+.nav-auto {
+  width: 80rem;
+  position: absolute;
+  bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.nav-auto div {
+  padding: 0.7rem;
+  border: 0.2rem solid deeppink;
+  border-radius: 50%;
+
+  transition: 1s;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1,
+#radio2:checked ~ .nav-auto .auto-btn2,
+#radio3:checked ~ .nav-auto .auto-btn3,
+#radio4:checked ~ .nav-auto .auto-btn4,
+#radio5:checked ~ .nav-auto .auto-btn5 {
+  background-color: deeppink;
+}

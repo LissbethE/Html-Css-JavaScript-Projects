@@ -1,0 +1,125 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.container h1 {
+  padding: 5rem 0 3rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  text-shadow: 0.3rem 0.3rem rgb(0 123 255 / 25%);
+}
+
+.faq-container {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.faq {
+  color: rgb(5, 31, 78);
+  background-color: rgba(171, 184, 195, 0.1);
+
+  border-radius: 1rem;
+  margin: 2rem 0;
+  padding: 3rem;
+
+  position: relative;
+  transition: all 0.3s ease-in;
+}
+
+.faq-title {
+  margin: 0 3.5rem 1rem 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+}
+.faq-title span {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: #007bff;
+}
+.faq-text {
+  font-size: 1.6rem;
+  display: none;
+}
+
+.btn {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #007bff;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+.btn .fa-times {
+  display: none;
+}
+
+/* javascript ----------------------------------------------------------------- */
+
+.faq.active {
+  border: 0.3rem solid rgb(0 123 255 / 25%);
+  box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.faq.active:active {
+  border: 0.3rem solid rgb(0 123 255 / 25%);
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.1rem);
+}
+
+.faq.active::before,
+.faq.active::after {
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  font-size: 9rem;
+  color: #2ecc71;
+  opacity: 0.2;
+  position: absolute;
+  top: -1rem;
+  left: 1.5rem;
+  z-index: 0;
+}
+.faq.active::before {
+  color: #3498db;
+  top: -3.5rem;
+  left: -1.5rem;
+  transform: rotateY(180deg);
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq.active .btn .fa-times {
+  display: block;
+}
+
+.faq.active .btn .fa-chevron-down {
+  display: none;
+}
