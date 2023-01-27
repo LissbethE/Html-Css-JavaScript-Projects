@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
+/* Light theme colors */
+:root {
+  --primary-color: rgb(255, 92, 92);
+  --primary-variant: #ff2d2d;
+  --secondary-color: #1b9999;
+  --on-primary: rgb(250, 250, 250);
+  --on-background: rgb(66, 66, 66);
+  --on-background-alt: rgba(66, 66, 66, 0.7);
+  --background: rgb(255, 255, 255);
+
+  --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* Dark theme colors */ 
+[data-theme='dark'] {
+  --primary-color: rgb(150, 65, 255);
+  --primary-variant: #6c63ff;
+  --secondary-color: #03dac5;
+  --on-primary: #000;
+  --on-background: rgba(255, 255, 255, 0.9);
+  --on-background-alt: rgba(255, 255, 255, 0.7);
+  --background: #121212;
+}
+
+html {
+  font-size: 62.5%;
+
+  /* Scroll Smoothly */
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+
+  color: var(--on-background);
+  background-color: var(--background);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%231b9999' fill-opacity='0.3'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* ----------------------------------- */
+/* Navigation */
+.nav {
+  width: 100vw;
+  padding: 1.5rem;
+  font-size: max(2vw, 1.6rem);
+  letter-spacing: 0.3rem;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  background: rgb(255 255 255 / 50%);
+}
+
+.nav__link {
+  font-weight: 400;
+  margin-right: 2.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 0.3rem solid transparent;
+  font-weight: bold;
+
+  transition: all 0.7s;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: var(--on-background);
+  border-bottom: 0.3rem solid;
+}
+
+/* ----------------------------------- */
+/* Home Section */
+.home,
+.about,
+.projects,
+.contact {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  border-top: 0.2rem solid black;
+}
+
+.title-ground {
+  text-align: center;
+}
+
+.title {
+  font-size: max(7vw, 2rem);
+  margin-bottom: 0;
+}
+
+.title-ground__caption {
+  font-size: max(3vw, 1.6rem);
+  font-weight: normal;
+  color: var(--on-background-alt);
+}
+
+/* ----------------------------------- */
+/* Home Section */
+.about__text {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* About Section */
+.about__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.about__content {
+  flex: 1;
+  flex-wrap: wrap;
+  align-self: normal;
+  text-align: center;
+
+  border: 0.2rem solid var(--secondary-color);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+
+  width: auto;
+  background: var(--background);
+  box-shadow: var(--box-shadow);
+}
+
+.about__img {
+  width: max(22vw, 15rem);
+  height: max(22vw, 15rem);
+  display: inline-block;
+  object-fit: cover;
+}
+
+/* ----------------------------------- */
+/* Projects Section */
+.buttons {
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.btn {
+  min-width: 10rem;
+  height: 4rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  border: 0.2rem solid var(--primary-color);
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.btn:hover:not(.outline) {
+  filter: brightness(110%);
+}
+
+.primary {
+  background: var(--primary-color);
+  color: var(--on-primary);
+}
+
+.secondary {
+  border: 0.2rem solid var(--secondary-color);
+}
+
+.secondary,
+.secondary:hover,
+.outline.secondary:hover {
+  background: var(--secondary-color);
+  color: var(--on-primary);
+}
+
+.outline {
+  background: var(--background);
+  color: var(--on-background);
+}
+
+.outline:hover {
+  background: var(--primary-color);
+  color: var(--on-primary);
+}
+
+.text-box {
+  width: 40%;
+  text-align: justify;
+  background: rgb(0 0 0 / 50%);
+  color: var(--on-primary);
+  border-radius: 1rem;
+  padding: 3rem;
+}
+
+.paragraph {
+  margin: 0;
+  line-height: 2.5rem;
+}
+
+/* ----------------------------------- */
+/* Contact Section */
+.fab {
+  font-size: 10rem;
+  margin-right: 5rem;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.fab:hover {
+  color: var(--on-background);
+}
+
+/* ----------------------------------- */
+/* ----------------------------------- */
+/* Dark Mode Toggle */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  right: 1.5rem;
+  top: 7rem;
+}
+
+.theme-switch-wrapper span {
+  margin-right: 1rem;
+  font-size: 1.6rem;
+}
+
+.toggle-text {
+  position: relative;
+  top: -0.4rem;
+  right: 0.5rem;
+  color: var(--on-background);
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 3.4rem;
+  position: relative;
+  width: 6rem;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  width: 2.6rem;
+  height: 2.6rem;
+  background: #fff;
+  bottom: 0.4rem;
+  content: '';
+  left: 0.4rem;
+  position: absolute;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: var(--primary-color);
+}
+
+input:checked + .slider::before {
+  transform: translateX(2.6rem);
+}
+
+.slider.round {
+  border-radius: 3.4rem;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
+.fas {
+  font-size: 3rem;
+  margin-right: 0.5rem;
+}

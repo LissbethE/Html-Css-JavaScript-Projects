@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Shalimar&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Sound Board</title>
+  </head>
+  <body>
+    <div class="container">
+      <!--- Su Version ---------------------------------------------------------- -->
+      <audio
+        id="Gaviotas"
+        src="./audio/BirdSeagull 1006_21_preview.mp3"
+        type="audio/mp3"
+        class="host-audio"
+      ></audio>
+      <audio
+        id="Lluvia"
+        src="./audio/RainFallMedium PE1005201.mp3"
+        type="audio/mp3"
+        class="host-audio"
+      ></audio>
+      <audio
+        id="Victoria"
+        src="./audio/Ultimate-Victory-WST010901.mp3"
+        type="audio/mp3"
+        class="host-audio"
+      ></audio>
+
+      <div class="container-hostBtn"></div>
+
+      <!-- Mi Version -------------------------------------------------------- -->
+      <audio
+        controls
+        loop
+        src="./audio/BirdSeagull 1006_21_preview.mp3"
+        type="audio/mp3"
+        class="conexion-0 miAudio"
+      ></audio>
+      <audio
+        controls
+        loop
+        src="./audio/RainFallMedium PE1005201.mp3"
+        type="audio/mp3"
+        class="conexion-1 miAudio"
+      ></audio>
+      <audio
+        controls
+        loop
+        src="./audio/Ultimate-Victory-WST010901.mp3"
+        type="audio/mp3"
+        class="conexion-2 miAudio"
+      ></audio>
+
+      <div class="containerBtn"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

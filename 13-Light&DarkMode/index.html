@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://kit.fontawesome.com/6cdd3768cb.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Light & Dark Mode</title>
+  </head>
+  <body>
+    <!-- Dark Mode Switch -->
+    <div class="theme-switch-wrapper">
+      <span class="toggle-icon">
+        <span class="toggle-text">Light Mode</span>
+        <i class="fas fa-sun"></i>
+      </span>
+
+      <label class="theme-switch">
+        <input type="checkbox" class="checkbox" />
+        <div class="slider round"></div>
+      </label>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <a href="#home" class="nav__link">Home</a>
+      <a href="#about" class="nav__link">About</a>
+      <a href="#projects" class="nav__link">Projects</a>
+      <a href="#contact" class="nav__link">Contact</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+      <div class="title-ground">
+        <h1 class="title-ground__title title">Custom Title Here</h1>
+        <h2 class="title-ground__caption title">Welcome To The Website</h2>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h1 class="about__title title">Undraw Illustrations.</h1>
+
+      <div class="about__container">
+        <!-- 01 -->
+        <div class="about__content">
+          <h2 class="about__text">Lorem ipsum dolor sit</h2>
+          <img
+            src="img/undraw_web_development_light.svg"
+            alt="Web Development"
+            class="about__img img1"
+          />
+        </div>
+
+        <!-- 02 -->
+        <div class="about__content">
+          <h2 class="about__text">Lorem ipsum dolor sit</h2>
+          <img
+            src="img/undraw_programmer_light.svg"
+            alt="Programmer"
+            class="about__img img2"
+          />
+        </div>
+
+        <!-- 03 -->
+        <div class="about__content">
+          <h2 class="about__text">Lorem ipsum dolor sit</h2>
+          <img
+            src="img/undraw_freelancer_light.svg"
+            alt="Freelancer"
+            class="about__img img3"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <h1 class="projects__title title">Button</h1>
+
+      <div class="buttons">
+        <button class="btn primary">Primary</button>
+        <button class="btn secondary">Secondary</button>
+        <button class="btn primary">Disabled</button>
+        <button class="btn outline">Outline</button>
+        <button class="btn secondary outline">Alt Outline</button>
+        <button class="btn outline" disabled>Disabled</button>
+      </div>
+
+      <div class="text-box">
+        <p class="paragraph">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
+          ratione nostrum, tenetur a debitis quae illo nihil officia, ducimus
+          quam, eveniet cupiditate. Placeat necessitatibus laudantium vel
+          accusantium natus cum esse.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="social-icons">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-github"></i>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
