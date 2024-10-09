@@ -1,1 +1,1 @@
-# OtrosProyectos-JS
+# Web projects: HTML, CSS, JS.
